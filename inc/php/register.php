@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+    include "header.php";
 ?>
 
 <!-- Make sure all your bars are the first things in your <body> -->
@@ -20,5 +20,6 @@ include "header.php";
     </form>
 </div>
 
-</body>
-</html>
+<?php
+    include "footer.php";
+?>

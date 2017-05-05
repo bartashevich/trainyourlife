@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+    include "header.php";
 ?>
 
 <header class="bar bar-nav">
@@ -9,7 +9,7 @@ include "header.php";
 <div class="content">
     <ul class="table-view">
         <li class="table-view-cell">
-            <a href="#" style="padding-right: 15px;">
+            <a href="/index.php?p=weight_stats" data-transition="slide-in" style="padding-right: 15px;">
                 <div class="media-body">
                     <i style="padding: 0px 11.5px" class="fa fa-balance-scale" aria-hidden="true"></i> 72.00 kg <i class="fa fa-bar-chart pull-right" aria-hidden="true"></i>
                 </div>
@@ -48,5 +48,6 @@ include "header.php";
     </a>
 </nav>
 
-</body>
-</html>
+<?php
+    include "footer.php";
+?>

@@ -18,7 +18,5 @@
     <!-- Optionally, include either the iOS or Android theme -->
     <link href="/css/ratchet-theme-ios.css" rel="stylesheet">
 
-    <!-- Include the compiled Ratchet JS -->
-    <script src="/js/ratchet.js"></script>
 </head>
 <body>

@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+    include "header.php";
 ?>
 
 <header class="bar bar-nav">
@@ -130,5 +130,6 @@ include "header.php";
     </a>
 </nav>
 
-</body>
-</html>
+<?php
+    include "footer.php";
+?>
