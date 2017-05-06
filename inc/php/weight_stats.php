@@ -14,12 +14,9 @@
         <h4>Your weight: </h4>
         <input type="number" step="0.01" min="0" placeholder="Enter your weight...">
         <h4>Date of measurement: </h4>
-        <input type="date" name="weight_date" max="2018-1-1">
+        <input title="weight_date" id="weight_date" type="date" name="weight_date" max="2018-1-1" placeholder="Enter your mesurement date...">
         <button class="btn btn-positive btn-block">Save</button>
     </form>
-    <div id="test" style="display: none">
-        OLA
-    </div>
     <div class="content-padded" align="center">
         <h4>Your weight statistics</h4>
         <div class="segmented-control">
