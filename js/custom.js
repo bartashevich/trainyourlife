@@ -28,6 +28,7 @@ function dailyWeight() {
 
     });
 }
+
 function monthlyWeight() {
     Highcharts.chart('container', {
         title: {
@@ -72,4 +73,8 @@ function monthlyWeight() {
             }
         ]
     });
+}
+
+function allWeight(){
+    $('#container').html('<table class="weight"> <tr> <th>Date</th> <th>Weight</th> </tr> <tr> <td>05/09/2017</td> <td>50 kg</td> </tr> <tr> <td>06/09/2017</td> <td>55 kg</td> </tr> </table>');
 }

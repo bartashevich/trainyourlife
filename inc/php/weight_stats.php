@@ -22,14 +22,12 @@
         <div class="segmented-control">
             <a class="control-item" onclick="dailyWeight()">Daily</a>
             <a class="control-item" onclick="monthlyWeight()">Monthly</a>
-            <a class="control-item">All time</a>
+            <a class="control-item" onclick="allWeight()">All time</a>
         </div>
 
         <div style="padding-top: 10px" id="container">
             <h5>Select option above...</h5>
         </div>
-
-        <!--<img style="max-width: 100%; padding-top: 10px" src="http://stats.idre.ucla.edu/wp-content/uploads/2016/02/Histogram.png">-->
     </div>
 </div>
 

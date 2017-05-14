@@ -14,6 +14,7 @@
     <!-- Include the compiled Ratchet CSS -->
     <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="/css/ratchet.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
 
     <!-- Optionally, include either the iOS or Android theme -->
     <link href="/css/ratchet-theme-ios.css" rel="stylesheet">

@@ -11,7 +11,7 @@ include "low_navbar.php";
         <ul class="table-view">
             <li class="table-view-cell media">
                 <a class="navigate-right">
-                    <img class="media-object pull-left" src="https://cdn.authoritynutrition.com/wp-content/uploads/2013/01/meal-plan.jpg" height="42px" width="42px">
+                    <img class="media-object pull-left" src="/img/diet-plan.jpg" height="42px" width="42px">
                     <div class="media-body">
                         Diet plans
                     </div>
@@ -19,7 +19,7 @@ include "low_navbar.php";
             </li>
             <li class="table-view-cell media">
                 <a class="navigate-right" href="/index.php?p=food-list" data-transition="slide-in" style="padding-right: 15px;">
-                    <img class="media-object pull-left" src="https://www.colourbox.com/preview/8932037-health-food.jpg" height="42px" width="42px">
+                    <img class="media-object pull-left" src="/img/list-food.jpg" height="42px" width="42px">
                     <div class="media-body">
                         List all food
                     </div>

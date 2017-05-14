@@ -1,0 +1,44 @@
+<?php
+include "header.php";
+include "low_navbar.php";
+?>
+
+    <header class="bar bar-nav">
+        <a class="icon icon-left-nav pull-left" href="/index.php?p=exercise-list" data-transition="slide-out"></a>
+        <a class="icon icon-gear pull-right"></a>
+        <h1 class="title">Abs</h1>
+    </header>
+    <div class="content">
+        <ul class="table-view">
+            <li class="table-view-cell media">
+                <a class="navigate-right" href="/index.php?p=exercise_details" data-transition="slide-in" style="padding-right: 15px;">
+                    <img class="media-object pull-left" src="/img/abdominal-crunches.jpg" height="42px" width="42px">
+                    <div class="media-body">
+                        Abdominal Crunches
+                    </div>
+                </a>
+            </li>
+            <li class="table-view-cell media">
+                <a class="navigate-right">
+                    <img class="media-object pull-left" src="/img/sit-ups.jpg" height="42px" width="42px">
+                    <div class="media-body">
+                        Sit-Ups
+                    </div>
+                </a>
+            </li>
+            <li class="table-view-cell media">
+                <a class="navigate-right">
+                    <img class="media-object pull-left" src="/img/leg-raises.jpg" height="42px" width="42px">
+                    <div class="media-body">
+                        Leg Raises
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+<?php
+print_low_navbar('exercises');
+
+include "footer.php";
+?>
