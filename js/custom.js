@@ -78,3 +78,53 @@ function monthlyWeight() {
 function allWeight(){
     $('#container').html('<table class="weight"> <tr> <th>Date</th> <th>Weight</th> </tr> <tr> <td>05/09/2017</td> <td>50 kg</td> </tr> <tr> <td>06/09/2017</td> <td>55 kg</td> </tr> </table>');
 }
+
+
+Highcharts.chart('muscle_spider_chart', {
+
+    chart: {
+        polar: true,
+        type: 'line'
+    },
+
+    title: {
+        text: 'Muscle training',
+        x: -80
+    },
+
+    pane: {
+        size: '80%'
+    },
+
+    xAxis: {
+        categories: ['Abs', 'Butt', 'Arm', 'Leg',
+            'Chest', 'Back'],
+        tickmarkPlacement: 'on',
+        lineWidth: 0
+    },
+
+    yAxis: {
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        min: 0
+    },
+
+    tooltip: {
+        shared: true,
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}%</b><br/>'
+    },
+
+    legend: {
+        align: 'right',
+        verticalAlign: 'top',
+        y: 70,
+        layout: 'vertical'
+    },
+
+    series: [{
+        name: 'Musle Training (%)',
+        data: [20, 5, 5, 20, 30, 20],
+        pointPlacement: 'on'
+    }]
+
+});

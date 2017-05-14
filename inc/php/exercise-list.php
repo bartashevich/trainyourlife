@@ -19,7 +19,7 @@
             </a>
         </li>
         <li class="table-view-cell media">
-            <a class="navigate-right">
+            <a class="navigate-right" href="/index.php?p=exercise-group" data-transition="slide-in" style="padding-right: 15px;">
                 <img class="media-object pull-left" src="/img/butt-workout.jpg" height="42px" width="42px">
                 <div class="media-body">
                     Butt
@@ -27,7 +27,7 @@
             </a>
         </li>
         <li class="table-view-cell media">
-            <a class="navigate-right">
+            <a class="navigate-right" href="/index.php?p=exercise-group" data-transition="slide-in" style="padding-right: 15px;">
                 <img class="media-object pull-left" src="/img/arm-workout.jpg" height="42px" width="42px">
                 <div class="media-body">
                     Arm
@@ -35,7 +35,7 @@
             </a>
         </li>
         <li class="table-view-cell media">
-            <a class="navigate-right">
+            <a class="navigate-right" href="/index.php?p=exercise-group" data-transition="slide-in" style="padding-right: 15px;">
                 <img class="media-object pull-left" src="/img/leg-workout.jpg" height="42px" width="42px">
                 <div class="media-body">
                     Leg
@@ -43,7 +43,7 @@
             </a>
         </li>
         <li class="table-view-cell media">
-            <a class="navigate-right">
+            <a class="navigate-right" href="/index.php?p=exercise-group" data-transition="slide-in" style="padding-right: 15px;">
                 <img class="media-object pull-left" src="/img/chest-workout.jpg" height="42px" width="42px">
                 <div class="media-body">
                     Chest
@@ -51,7 +51,7 @@
             </a>
         </li>
         <li class="table-view-cell media">
-            <a class="navigate-right">
+            <a class="navigate-right" href="/index.php?p=exercise-group" data-transition="slide-in" style="padding-right: 15px;">
                 <img class="media-object pull-left" src="/img/back-workout.jpg" height="42px" width="42px">
                 <div class="media-body">
                     Back
@@ -59,7 +59,7 @@
             </a>
         </li>
         <li class="table-view-cell media">
-            <a class="navigate-right">
+            <a class="navigate-right" href="/index.php?p=exercise-group" data-transition="slide-in" style="padding-right: 15px;">
                 <img class="media-object pull-left" src="/img/full-body-workout.jpg" height="42px" width="42px">
                 <div class="media-body">
                     All exercises

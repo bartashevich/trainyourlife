@@ -10,7 +10,7 @@ include "low_navbar.php";
     <div class="content">
         <ul class="table-view">
             <li class="table-view-cell media">
-                <a class="navigate-right">
+                <a class="navigate-right" href="/index.php?p=exercise-plans" data-transition="slide-in" style="padding-right: 15px;">
                     <img class="media-object pull-left" src="/img/exercise-plan.jpg" height="42px" width="42px">
                     <div class="media-body">
                         Exercise plans

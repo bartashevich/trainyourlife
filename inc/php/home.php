@@ -18,10 +18,8 @@
         </li>
         <li class="table-view-cell table-view-divider"></li>
         <li class="table-view-cell" style="padding-right: 15px">
-            <div align="center">
-                <h4>Muscle Usage</h4>
-                <img align="center" height="200px" src="http://www.advsofteng.com/images/multiradar_g.png">
-            </div>
+            <div id="muscle_spider_chart" style="min-width: 400px; max-width: 600px; height: 400px; margin: 0 auto"></div>
+
         </li>
     </ul>
 </div>
