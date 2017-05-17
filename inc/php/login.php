@@ -66,7 +66,7 @@
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div class="content">
     <div class="content-padded" align="center">
-        <img style="max-width: 100%" src="/uploads/images/logo.png">
+        <img style="max-width: 100%" src="/uploads/images/running.jpg">
     </div>
     <form class="content-padded">
         <input type="text" placeholder="Email / Username">

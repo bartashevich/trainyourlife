@@ -19,7 +19,7 @@ $(document).on("click","#add_food",function() {
 });
 
 //ADD EXERCISE BUTTON
-$(document).on("click","#add_food",function() {
+$(document).on("click","#add_exercise",function() {
     $('#add_exercise_modal').attr('class','modal active');
     $('#add_exercise_modal_header').text($(this).attr('data-parent'));
     $('#exercise_menu').val($(this).attr('data-parent'));
