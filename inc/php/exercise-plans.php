@@ -35,7 +35,7 @@ include "low_navbar.php";
                         <a id="navigate_right" class="navigate-right" href="/index.php?p=exercise_details" style="padding-right: 15px;">
                             <img class="media-object pull-left" src="/img/leg-workout.jpg" height="42px" width="42px">
                             <div class="media-body">
-                                Jogging <p id="delete_food" style="display: none" align="right"><i style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></p>
+                                Jogging <p id="delete_exercise" style="display: none" align="right"><i style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></p>
                                 <p>Time: 10m</p>
                             </div>
                         </a>
