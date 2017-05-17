@@ -165,3 +165,20 @@ function edit_food_plan(){
         $('p[id="delete_food"]').hide();
     }
 }
+
+function edit_exercise_plan(){
+    if($('#edit_button2').attr('class') == 'btn btn-block btn-positive'){
+        $('div[id="add_exercise_button"]').show();
+        $('#edit_button2').text("Confirm plan");
+        $("#edit_button2").attr('class', 'btn btn-block btn-negative');
+        $('a[id="navigate_right"]').attr('class', 'disable-a');
+        $('p[id="delete_food"]').show();
+    }
+    else if($('#edit_button2').attr('class') == 'btn btn-block btn-negative'){
+        $('div[id="add_exercise_button"]').hide();
+        $('#edit_button2').text("Edit plan");
+        $("#edit_button2").attr('class', 'btn btn-block btn-positive');
+        $('a[id="navigate_right"]').attr('class', 'navigate-right');
+        $('p[id="delete_food"]').hide();
+    }
+}
