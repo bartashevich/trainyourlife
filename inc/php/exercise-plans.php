@@ -12,7 +12,7 @@ include "low_navbar.php";
         <!--<h5 style="padding-left: 10px">You don't have any plan.</h5>-->
         <ul class="table-view">
             <li class="table-view-cell media">
-                <a id="diet-menu" class="navigate-right" data-target="#eexercise1000" style="padding-right: 15px;text-decoration: none;">
+                <a id="exercise-menu" class="navigate-right" data-target="#exercise1000" style="padding-right: 15px;text-decoration: none;">
                     <img class="media-object pull-left" src="/img/leg-workout.jpg" height="42px" width="42px">
                     <div class="media-body">
                         10:00 AM - Morning exercise
