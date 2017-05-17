@@ -48,8 +48,8 @@
       <file leaf-file-name="exercise-plans.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inc/php/exercise-plans.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2787">
-              <caret line="15" column="83" lean-forward="false" selection-start-line="15" selection-start-column="83" selection-end-line="15" selection-end-column="83" />
+            <state relative-caret-position="-874">
+              <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding>
                 <marker date="1495013127900" expanded="false" signature="4299:4341" ph="..." />
                 <marker date="1495013127900" expanded="false" signature="4591:4602" ph="..." />
@@ -361,7 +361,7 @@
       <workItem from="1494882862598" duration="4853000" />
       <workItem from="1494964092296" duration="5311000" />
       <workItem from="1494969494512" duration="10330000" />
-      <workItem from="1495011325552" duration="1930000" />
+      <workItem from="1495011325552" duration="2370000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1494024816974</created>
@@ -395,7 +395,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63278000" />
+    <option name="totallyTimeSpent" value="63718000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -844,8 +844,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/inc/php/exercise-plans.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2787">
-          <caret line="15" column="83" lean-forward="false" selection-start-line="15" selection-start-column="83" selection-end-line="15" selection-end-column="83" />
+        <state relative-caret-position="-874">
+          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding>
             <marker date="1495013127900" expanded="false" signature="4299:4341" ph="..." />
             <marker date="1495013127900" expanded="false" signature="4591:4602" ph="..." />
