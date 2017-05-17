@@ -12,7 +12,7 @@ include "low_navbar.php";
         <!--<h5 style="padding-left: 10px">You don't have any plan.</h5>-->
         <ul class="table-view">
             <li class="table-view-cell media">
-                <a id="exercise-menu" class="navigate-right" data-target="#exercise1000" style="padding-right: 15px;text-decoration: none;">
+                <a id="exercise-menu" class="navigate-right" data-target="#exercise1000" onclick="showExercises()" style="padding-right: 15px;text-decoration: none;">
                     <img class="media-object pull-left" src="/img/leg-workout.jpg" height="42px" width="42px">
                     <div class="media-body">
                         10:00 AM - Morning exercise
@@ -66,7 +66,7 @@ include "low_navbar.php";
                     <?php } ?>
                 </ul>
                 <div align="center" id="add_exercise_button" style="display: none">
-                    <a id="add_exercise" data-parent="#eat1000" style="padding: 5px 0; width: 50%" class="btn btn-block btn-positive">Add food</a>
+                    <a id="add_exercise" data-parent="#exercise1000" style="padding: 5px 0; width: 50%" class="btn btn-block btn-positive">Add exercise</a>
                     <hr>
                 </div>
             </div>
