@@ -45,7 +45,7 @@ include "low_navbar.php";
                         <a id="navigate_right" class="navigate-right" href="/index.php?p=product" data-transition="slide-in" style="padding-right: 15px;">
                             <img class="media-object pull-left" src="/img/leg-raises.jpg" height="42px" width="42px">
                             <div class="media-body">
-                                Leg raises <p id="delete_food" style="display: none" align="right"><i style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></p>
+                                Leg raises <p id="delete_exercise" style="display: none" align="right"><i style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></p>
                                 <p>Repetitions: 10</p>
                             </div>
                         </a>
@@ -57,7 +57,7 @@ include "low_navbar.php";
                             <a id="navigate_right" class="navigate-right" href="/index.php?p=exercise_details" data-transition="slide-in" style="padding-right: 15px;">
                                 <img class="media-object pull-left" src="" height="42px" width="42px">
                                 <div class="media-body">
-                                    <?php echo $_POST['exercise_name']; ?> <p id="delete_food" style="display: none" align="right"><i style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></p>
+                                    <?php echo $_POST['exercise_name']; ?> <p id="delete_exercise" style="display: none" align="right"><i style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></p>
                                     <p>Amount: <?php echo $_POST['exercise_duration']; ?>m</p>
                                 </div>
                             </a>
