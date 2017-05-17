@@ -20,3 +20,11 @@ table.weight td, table.weight th {
 table.weight tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+table.food th{
+    text-align: center;
+}
+
+.disable-a{
+    pointer-events: none;
+}

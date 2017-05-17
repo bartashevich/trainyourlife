@@ -30,12 +30,12 @@ function print_low_navbar($active_tab){
                     <span class="tab-label">Food</span>
                 </a>
                 <a class="tab-item" href="#">
-                    <span class="icon icon-download"></span>
-                    <span class="tab-label">Soon</span>
+                    <span class="icon icon-person"></span>
+                    <span class="tab-label">Profile</span>
                 </a>
                 <a class="tab-item" href="#">
                     <span class="icon icon-download"></span>
-                    <span class="tab-label">Soon</span>
+                    <span class="tab-label">History</span>
                 </a>
             </nav>';
 }

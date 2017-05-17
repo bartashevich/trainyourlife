@@ -18,6 +18,5 @@
 
     <!-- Optionally, include either the iOS or Android theme -->
     <link href="/css/ratchet-theme-ios.css" rel="stylesheet">
-
 </head>
 <body>

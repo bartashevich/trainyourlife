@@ -1,3 +1,23 @@
+//DROPDOWM MENU
+$(document).on("click","#diet-menu",function() {
+    if($($(this).attr('data-target')).is(':visible'))
+    {
+        $($(this).attr('data-target')).hide('slow');
+    }
+    else{
+        $('div[id*="eat"]').hide();
+        $($(this).attr('data-target')).show('slow');
+    }
+});
+
+//ADD FOOD BUTTON
+$(document).on("click","#add_food",function() {
+    $('#add_food_modal').attr('class','modal active');
+    $('#add_food_modal_header').text($(this).attr('data-parent'));
+    $('#food_menu').val($(this).attr('data-parent'));
+    //console.log($(this).attr('data-parent'));
+});
+
 function dailyWeight() {
     Highcharts.chart('container', {
         title: {
@@ -128,3 +148,20 @@ Highcharts.chart('muscle_spider_chart', {
     }]
 
 });
+
+function edit_food_plan(){
+    if($('#edit_button').attr('class') == 'btn btn-block btn-positive'){
+        $('div[id="add_food_button"]').show();
+        $('#edit_button').text("Confirm plan");
+        $("#edit_button").attr('class', 'btn btn-block btn-negative');
+        $('a[id="navigate_right"]').attr('class', 'disable-a');
+        $('p[id="delete_food"]').show();
+    }
+    else if($('#edit_button').attr('class') == 'btn btn-block btn-negative'){
+        $('div[id="add_food_button"]').hide();
+        $('#edit_button').text("Edit plan");
+        $("#edit_button").attr('class', 'btn btn-block btn-positive');
+        $('a[id="navigate_right"]').attr('class', 'navigate-right');
+        $('p[id="delete_food"]').hide();
+    }
+}

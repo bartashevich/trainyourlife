@@ -12,10 +12,10 @@
 <div class="content">
     <form class="content-padded" style="padding-bottom: 20px">
         <h4>Your weight: </h4>
-        <input type="number" step="0.01" min="0" placeholder="Enter your weight...">
+        <input id="weight_number" name="weight_number" type="number" step="0.01" min="0" placeholder="Enter your weight...">
         <h4>Date of measurement: </h4>
         <input title="weight_date" id="weight_date" type="date" name="weight_date" max="2018-1-1" placeholder="Enter your mesurement date...">
-        <button class="btn btn-positive btn-block">Save</button>
+        <a href="#" onclick="$('#weight_number').val(''); $('#weight_date').val('');" class="btn btn-positive btn-block">Save</a>
     </form>
     <div class="content-padded" align="center">
         <h4>Your weight statistics</h4>

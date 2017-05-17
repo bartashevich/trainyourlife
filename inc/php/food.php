@@ -13,7 +13,7 @@ include "low_navbar.php";
                 <a class="navigate-right" href="/index.php?p=diet-plans" data-transition="slide-in" style="padding-right: 15px;">
                     <img class="media-object pull-left" src="/img/diet-plan.jpg" height="42px" width="42px">
                     <div class="media-body">
-                        Diet plans
+                        My diet
                     </div>
                 </a>
             </li>

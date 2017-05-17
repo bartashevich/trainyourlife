@@ -71,8 +71,8 @@
     <form class="content-padded">
         <input type="text" placeholder="Email / Username">
         <input type="password" placeholder="Password">
-        <button class="btn btn-positive btn-block">Login</button>
-        <a href="/index.php?p=home" data-transition="slide-in" class="btn btn-primary btn-block">Continue without login...</a>
+        <a href="/index.php?p=home" class="btn btn-positive btn-block">Login</a>
+        <!--<a href="/index.php?p=home" data-transition="slide-in" class="btn btn-primary btn-block">Continue without login...</a>-->
     </form>
     <div align="center" style="padding-top: 30px">
         <p><a href="/index.php?p=password_recovery" data-transition="slide-in">Forgot your password?</a><br>
