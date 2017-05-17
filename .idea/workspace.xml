@@ -4,6 +4,7 @@
     <list default="true" id="60da6c7b-126c-42c8-a1bb-b4793f1d08e3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/php/exercise-plans.php" afterPath="$PROJECT_DIR$/inc/php/exercise-plans.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/custom.js" afterPath="$PROJECT_DIR$/js/custom.js" />
     </list>
     <ignored path="IHC.iws" />
     <ignored path=".idea/" />
@@ -64,23 +65,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exercise-plans.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="exercise-plans.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inc/php/exercise-plans.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="-1349">
+              <caret line="68" column="39" lean-forward="false" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="custom.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="767">
-              <caret line="181" column="32" lean-forward="false" selection-start-line="181" selection-start-column="32" selection-end-line="181" selection-end-column="32" />
+            <state relative-caret-position="552">
+              <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
               <folding>
-                <marker date="1495014370703" expanded="true" signature="2934:2954" ph="..." />
+                <marker date="1495014767297" expanded="true" signature="3245:3265" ph="..." />
               </folding>
             </state>
           </provider>
@@ -152,8 +153,8 @@
         <option value="$PROJECT_DIR$/inc/php/header.php" />
         <option value="$PROJECT_DIR$/inc/php/footer.php" />
         <option value="$PROJECT_DIR$/inc/php/diet-plans.php" />
-        <option value="$PROJECT_DIR$/js/custom.js" />
         <option value="$PROJECT_DIR$/inc/php/exercise-plans.php" />
+        <option value="$PROJECT_DIR$/js/custom.js" />
       </list>
     </option>
   </component>
@@ -377,7 +378,7 @@
       <workItem from="1494882862598" duration="4853000" />
       <workItem from="1494964092296" duration="5311000" />
       <workItem from="1494969494512" duration="10330000" />
-      <workItem from="1495013988546" duration="486000" />
+      <workItem from="1495013988546" duration="779000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1494024816974</created>
@@ -428,11 +429,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495014446184</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added:&#10; - exercises">
+      <created>1495014478515</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1495014478515</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61834000" />
+    <option name="totallyTimeSpent" value="62127000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -876,21 +884,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/custom.js">
+    <entry file="file://$PROJECT_DIR$/inc/php/exercise-plans.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="181" column="32" lean-forward="false" selection-start-line="181" selection-start-column="32" selection-end-line="181" selection-end-column="32" />
-          <folding>
-            <marker date="1495014370703" expanded="true" signature="2934:2954" ph="..." />
-          </folding>
+        <state relative-caret-position="-1349">
+          <caret line="68" column="39" lean-forward="false" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/php/exercise-plans.php">
+    <entry file="file://$PROJECT_DIR$/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="552">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding>
+            <marker date="1495014767297" expanded="true" signature="3245:3265" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

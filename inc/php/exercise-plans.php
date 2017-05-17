@@ -66,7 +66,7 @@ include "low_navbar.php";
                     <?php } ?>
                 </ul>
                 <div align="center" id="add_exercise_button" style="display: none">
-                    <a id="add_food" data-parent="#eat1000" style="padding: 5px 0; width: 50%" class="btn btn-block btn-positive">Add food</a>
+                    <a id="add_exercise" data-parent="#eat1000" style="padding: 5px 0; width: 50%" class="btn btn-block btn-positive">Add food</a>
                     <hr>
                 </div>
             </div>
@@ -134,10 +134,10 @@ include "low_navbar.php";
         <div style="margin-bottom: 5px" class="bar bar-standard bar-footer-secondary">
             <button id="edit_button2" onclick="edit_exercise_plan();" class="btn btn-block btn-positive">Edit plan</button>
         </div>
-        <div id="add_food_modal" class="modal">
+        <div id="add_exercise_modal" class="modal">
             <header class="bar bar-nav">
-                <a class="icon icon-close pull-right" href="#add_food_modal"></a>
-                <h1 id="add_food_modal_header" class="title">Modal</h1>
+                <a class="icon icon-close pull-right" href="#add_execise_modal"></a>
+                <h1 id="add_exercise_modal_header" class="title">Modal</h1>
             </header>
 
             <div class="content">

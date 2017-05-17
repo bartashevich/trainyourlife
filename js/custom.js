@@ -18,6 +18,14 @@ $(document).on("click","#add_food",function() {
     //console.log($(this).attr('data-parent'));
 });
 
+//ADD EXERCISE BUTTON
+$(document).on("click","#add_food",function() {
+    $('#add_exercise_modal').attr('class','modal active');
+    $('#add_exercise_modal_header').text($(this).attr('data-parent'));
+    $('#exercise_menu').val($(this).attr('data-parent'));
+    //console.log($(this).attr('data-parent'));
+});
+
 function dailyWeight() {
     Highcharts.chart('container', {
         title: {
