@@ -1,0 +1,30 @@
+#container {
+    min-width: 310px;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto
+}
+
+table.weight {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table.weight td, table.weight th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+table.weight tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+table.food th{
+    text-align: center;
+}
+
+.disable-a{
+    pointer-events: none;
+}
