@@ -12,7 +12,7 @@ include "low_navbar.php";
         <!--<h5 style="padding-left: 10px">You don't have any plan.</h5>-->
         <ul class="table-view">
             <li class="table-view-cell media">
-                <a id="exercise-menu" class="navigate-right" data-target="#exercise1000" onclick="showExercises()" style="padding-right: 15px;text-decoration: none;">
+                <a id="diet-menu" class="navigate-right" data-target="#eexercise1000" style="padding-right: 15px;text-decoration: none;">
                     <img class="media-object pull-left" src="/img/leg-workout.jpg" height="42px" width="42px">
                     <div class="media-body">
                         10:00 AM - Morning exercise
@@ -35,7 +35,7 @@ include "low_navbar.php";
                         <a id="navigate_right" class="navigate-right" href="/index.php?p=exercise_details" style="padding-right: 15px;">
                             <img class="media-object pull-left" src="/img/leg-workout.jpg" height="42px" width="42px">
                             <div class="media-body">
-                                Jogging <p id="delete_exercise" style="display: none" align="right"><i style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></p>
+                                Jogging <p id="delete_food" style="display: none" align="right"><i style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></p>
                                 <p>Time: 10m</p>
                             </div>
                         </a>
@@ -45,7 +45,7 @@ include "low_navbar.php";
                         <a id="navigate_right" class="navigate-right" href="/index.php?p=product" data-transition="slide-in" style="padding-right: 15px;">
                             <img class="media-object pull-left" src="/img/leg-raises.jpg" height="42px" width="42px">
                             <div class="media-body">
-                                Leg raises <p id="delete_exercise" style="display: none" align="right"><i style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></p>
+                                Leg raises <p id="delete_food" style="display: none" align="right"><i style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></p>
                                 <p>Repetitions: 10</p>
                             </div>
                         </a>
@@ -57,7 +57,7 @@ include "low_navbar.php";
                             <a id="navigate_right" class="navigate-right" href="/index.php?p=exercise_details" data-transition="slide-in" style="padding-right: 15px;">
                                 <img class="media-object pull-left" src="" height="42px" width="42px">
                                 <div class="media-body">
-                                    <?php echo $_POST['exercise_name']; ?> <p id="delete_exercise" style="display: none" align="right"><i style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></p>
+                                    <?php echo $_POST['exercise_name']; ?> <p id="delete_food" style="display: none" align="right"><i style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></p>
                                     <p>Amount: <?php echo $_POST['exercise_duration']; ?>m</p>
                                 </div>
                             </a>
@@ -66,7 +66,7 @@ include "low_navbar.php";
                     <?php } ?>
                 </ul>
                 <div align="center" id="add_exercise_button" style="display: none">
-                    <a id="add_exercise" data-parent="#exercise1000" style="padding: 5px 0; width: 50%" class="btn btn-block btn-positive">Add exercise</a>
+                    <a id="add_food" data-parent="#eat1000" style="padding: 5px 0; width: 50%" class="btn btn-block btn-positive">Add food</a>
                     <hr>
                 </div>
             </div>
@@ -134,10 +134,10 @@ include "low_navbar.php";
         <div style="margin-bottom: 5px" class="bar bar-standard bar-footer-secondary">
             <button id="edit_button2" onclick="edit_exercise_plan();" class="btn btn-block btn-positive">Edit plan</button>
         </div>
-        <div id="add_exercise_modal" class="modal">
+        <div id="add_food_modal" class="modal">
             <header class="bar bar-nav">
-                <a class="icon icon-close pull-right" href="#add_execise_modal"></a>
-                <h1 id="add_exercise_modal_header" class="title">Modal</h1>
+                <a class="icon icon-close pull-right" href="#add_food_modal"></a>
+                <h1 id="add_food_modal_header" class="title">Modal</h1>
             </header>
 
             <div class="content">

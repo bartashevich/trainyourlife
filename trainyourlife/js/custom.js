@@ -10,44 +10,11 @@ $(document).on("click","#diet-menu",function() {
     }
 });
 
-/*
-$(document).on("click","#exercise-menu",function() {
-    if($($(this).attr('data-target')).is(':visible'))
-    {
-        $($(this).attr('data-target')).hide('slow');
-    }
-    else{
-        $('div[id*="exercise"]').hide();
-        $($(this).attr('data-target')).show('slow');
-    }
-});*/
-
-
-function showExercises() {
-    if($('#exercise1000').css('display') == 'none')
-    {
-        $("#exercise1000").show('slow');
-    }
-    else
-    {
-        $("#exercise1000").hide('slow');
-    }
-
-}
-
 //ADD FOOD BUTTON
 $(document).on("click","#add_food",function() {
     $('#add_food_modal').attr('class','modal active');
     $('#add_food_modal_header').text($(this).attr('data-parent'));
     $('#food_menu').val($(this).attr('data-parent'));
-    //console.log($(this).attr('data-parent'));
-});
-
-//ADD EXERCISE BUTTON
-$(document).on("click","#add_exercise",function() {
-    $('#add_exercise_modal').attr('class','modal active');
-    $('#add_exercise_modal_header').text($(this).attr('data-parent'));
-    $('#exercise_menu').val($(this).attr('data-parent'));
     //console.log($(this).attr('data-parent'));
 });
 
@@ -205,13 +172,13 @@ function edit_exercise_plan(){
         $('#edit_button2').text("Confirm plan");
         $("#edit_button2").attr('class', 'btn btn-block btn-negative');
         $('a[id="navigate_right"]').attr('class', 'disable-a');
-        $('p[id="delete_exercise"]').show();
+        $('p[id="delete_food"]').show();
     }
     else if($('#edit_button2').attr('class') == 'btn btn-block btn-negative'){
         $('div[id="add_exercise_button"]').hide();
         $('#edit_button2').text("Edit plan");
         $("#edit_button2").attr('class', 'btn btn-block btn-positive');
         $('a[id="navigate_right"]').attr('class', 'navigate-right');
-        $('p[id="delete_exercise"]').hide();
+        $('p[id="delete_food"]').hide();
     }
 }
