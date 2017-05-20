@@ -32,7 +32,6 @@ function showExercises() {
     {
         $("#exercise1000").hide('slow');
     }
-
 }
 
 //ADD FOOD BUTTON
