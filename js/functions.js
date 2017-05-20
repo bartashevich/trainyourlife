@@ -1,16 +1,7 @@
 /**
  * REGISTER
  */
-
-// HANDLE FIRST FORM
-$("#register_button").click(function(){
-
-    var myData = {};
-    myData['full_name'] = $('#full_name').val();
-    myData['username'] = $('#username').val();
-    myData['email'] = $('#email').val();
-    myData['password'] = $('#password').val();
-    myData['password_again'] = $('#password_again').val();
+function register(){
 
     $.ajax({
         url: 'lib/php/classes/register_account.php',
@@ -36,4 +27,24 @@ $("#register_button").click(function(){
             }
         }
     });
-});
+}
+
+/**
+ * LOGIN
+ */
+function login(){
+
+    $.ajax({
+        url: 'lib/php/classes/login_account.php',
+        type: "POST",
+        data: $("#login").serialize(),
+        success: function(result){
+            if(result == 'true'){
+                window.location = "/index.php?p=home";
+            }
+            else{
+                $('#login_fail').show('slow');
+            }
+        }
+    });
+}

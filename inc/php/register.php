@@ -16,7 +16,7 @@
         <input id="email" name="email" type="email" placeholder="Email">
         <input id="password" name="password" type="password" placeholder="Password">
         <input id="password_again" name="password_again" type="password" placeholder="Password (again)">
-        <a id="register_button" class="btn btn-positive btn-block">Register</a>
+        <a onclick="register()" class="btn btn-positive btn-block">Register</a>
     </form>
     <div id="register_success" align="center" style="display: none">
         <span style="color: green">You were registered successfully!</span>
