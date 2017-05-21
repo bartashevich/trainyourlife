@@ -2,13 +2,19 @@
 
 include ('../db.php');
 
-$login_query = $db->prepare("SELECT users.id FROM users WHERE users.`password` = ".$db->quote($_POST['password'])." AND users.username = ".$db->quote($_POST['email_username'])." OR users.`password` = ".$db->quote($_POST['password'])." AND users.email = ".$db->quote($_POST['email_username']));
-$login_query->execute();
-$login = $login_query->fetchAll();
+session_start();
 
-if(sizeof($login) > 1){
-    echo 'true';
+$token = md5(uniqid(rand(), true));
+
+$login_query = $db->prepare("CALL login_user(".$db->quote($_POST['email_username']).",".$db->quote(md5($_POST['password'])).", ".$db->quote($token).", @result)");
+$login_query->execute();
+
+$result_query = $db->prepare("SELECT @result AS result");
+$result_query->execute();
+$result = $result_query->fetch();
+
+if($result['result'] == '0'){
+    $_SESSION['token'] = $token;
 }
-else{
-    echo 'false';
-}
+
+echo $result['result'];

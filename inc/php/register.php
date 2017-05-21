@@ -21,9 +21,6 @@
     <div id="register_success" align="center" style="display: none">
         <span style="color: green">You were registered successfully!</span>
     </div>
-    <div id="register_notsamepass" align="center" style="display: none">
-        <span style="color: red">Passwords are not the same!</span>
-    </div>
     <div id="register_fail" align="center" style="display: none">
         <span style="color: red">A problem has occured!</span>
     </div>

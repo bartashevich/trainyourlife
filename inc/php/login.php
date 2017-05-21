@@ -75,7 +75,7 @@
         <!--<a href="/index.php?p=home" data-transition="slide-in" class="btn btn-primary btn-block">Continue without login...</a>-->
     </form>
     <div id="login_fail" align="center" style="display: none">
-        <span style="color: red">Email, Username or Password are wrong</span>
+        <span style="color: red">Login error</span>
     </div>
     <div align="center" style="padding-top: 20px">
         <p><a href="/index.php?p=password_recovery" data-transition="slide-in">Forgot your password?</a><br>

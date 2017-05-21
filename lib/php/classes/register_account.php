@@ -2,13 +2,11 @@
 
 include ('../db.php');
 
-if($_POST['password'] != $_POST['password_again']){
-    echo 'notsamepass';
-    exit();
-}
+$register_query = $db->prepare("CALL add_user(".$db->quote($_POST['full_name']).",".$db->quote($_POST['username']).",".$db->quote($_POST['email']).",".$db->quote(md5($_POST['password'])).", @result)");
+$register_query->execute();
 
-$sql = "INSERT INTO `users` (`full_name`,`username`,`email`,`password`) VALUES (".$db->quote($_POST['full_name']).", ".$db->quote($_POST['username'])." ,".$db->quote($_POST['email']).",".$db->quote($_POST['password']).")";
-$stmt = $db->prepare($sql);
-$ins = $stmt->execute();
+$result_query = $db->prepare("SELECT @result AS result");
+$result_query->execute();
+$result = $result_query->fetch();
 
-echo 'true';
+echo $result['result'];
