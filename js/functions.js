@@ -83,7 +83,8 @@ function login(){
                 $('#login_fail').show('slow').delay(3000).hide('slow');
             }
             else{
-                $('#login_fail').show('slow');
+                $('#login_fail span').text("Login error");
+                $('#login_fail').show('slow').delay(3000).hide('slow');
             }
         }
     });
