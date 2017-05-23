@@ -44,3 +44,21 @@ BEGIN
 				END IF;
 	END IF;
 END;
+
+/******************************************/
+
+DROP PROCEDURE IF EXISTS `logout_user`;
+
+CREATE DEFINER = `php`@`%` PROCEDURE `logout_user`(IN token varchar(255),OUT result int(1))
+BEGIN
+	DECLARE id INT(11);
+	SET id = get_user_by_token(token);
+
+	SET result = 1;
+
+	IF id
+		THEN
+			UPDATE users SET token = NULL WHERE users.id = id; SET result = 0;
+	END IF;
+END ;
+

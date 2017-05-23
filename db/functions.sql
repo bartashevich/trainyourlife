@@ -29,3 +29,23 @@ BEGIN
 
 	RETURN s;
 END;
+
+/********************************/
+
+DROP FUNCTION IF EXISTS `get_user_by_token`;
+
+CREATE DEFINER = `php`@`%` FUNCTION `get_user_by_token`(`token` varchar(255))
+ RETURNS int(1)
+BEGIN
+	DECLARE Value INT;
+
+	SELECT
+			users.id INTO Value
+	FROM
+			users
+	WHERE
+			users.token = token;
+
+	RETURN Value;
+END ;
+
