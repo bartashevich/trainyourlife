@@ -89,3 +89,16 @@ function login(){
         }
     });
 }
+
+function logout_button(){
+    $.ajax({
+        url: 'lib/php/classes/logout_account.php',
+        type: "POST",
+        success: function(result){
+            console.log(result);
+            if(result == '0'){
+                window.location = "/index.php?p=login";
+            }
+        }
+    });
+}

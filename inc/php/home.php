@@ -1,6 +1,13 @@
 <?php
     include "header.php";
     include "low_navbar.php";
+
+    session_start();
+
+    if(!isset($_SESSION['token'])){
+        header("Location: /index.php?p=login_first");
+        die();
+    }
 ?>
 
 <header class="bar bar-nav">
