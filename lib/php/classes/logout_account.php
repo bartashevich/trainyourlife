@@ -15,8 +15,10 @@ $result_query = $db->prepare("SELECT @result AS result");
 $result_query->execute();
 $result = $result_query->fetch();
 
-if($result['result'] == '0'){
+/*if($result['result'] == '0'){
     unset($_SESSION['token']);
-}
+}*/
+
+unset($_SESSION['token']);
 
 echo $result['result'];

@@ -95,10 +95,24 @@ function logout_button(){
         url: 'lib/php/classes/logout_account.php',
         type: "POST",
         success: function(result){
-            console.log(result);
-            if(result == '0'){
-                window.location = "/index.php?p=login";
-            }
+            window.location = "/index.php?p=login";
         }
     });
+}
+
+function delete_object(object){
+    if(getConfirmation($.trim($(object).closest("#object_name").text()))){
+        $(object).closest( "li" ).remove();
+    }
+}
+
+function getConfirmation(name){
+    var retVal = confirm("Do you want to remove " + name + " from your list?");
+
+    if( retVal == true ){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
