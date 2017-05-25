@@ -50,6 +50,12 @@ $(document).on("click","#add_exercise",function() {
     //console.log($(this).attr('data-parent'));
 });
 
+//ADD MEAL BUTTON
+$(document).on("click","#add_meal_button",function() {
+    console.log('open');
+    $('#add_meal_modal').attr('class','modal active');
+});
+
 function dailyWeight() {
     Highcharts.chart('container', {
         title: {

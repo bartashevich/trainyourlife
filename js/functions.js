@@ -116,3 +116,26 @@ function getConfirmation(name){
         return false;
     }
 }
+
+//ADD MEAL TO DATABASE
+$(document).on("click","#add_meal",function() {
+    $.ajax({
+        url: 'lib/php/classes/add_meal.php',
+        type: "POST",
+        data: $("#add_meal_form").serialize(),
+        success: function(result){
+            console.log(result);
+            /*if(result == '0'){
+                window.location = "/index.php?p=home";
+            }
+            if(result == '1'){
+                $('#login_fail span').text("Email/Username or Password are wrong!");
+                $('#login_fail').show('slow').delay(3000).hide('slow');
+            }
+            else{
+                $('#login_fail span').text("Login error");
+                $('#login_fail').show('slow').delay(3000).hide('slow');
+            }*/
+        }
+    });
+});

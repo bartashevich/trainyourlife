@@ -12,7 +12,7 @@ print_r($_POST);
 </header>
 <div class="content">
     <!--<h5 style="padding-left: 10px">You don't have any plan.</h5>-->
-    <ul class="table-view">
+    <ul class="table-view" style="margin-bottom: 91px">
         <li class="table-view-cell media">
             <a id="diet-menu" data-target="#eat1000" style="padding-right: 15px;text-decoration: none;">
                 <img class="media-object pull-left" src="/img/breakfast_logo.jpg" height="42px" width="42px">
@@ -124,6 +124,54 @@ print_r($_POST);
                         </div>
                     </a>
                 </li>
+                <li class="table-view-cell media">
+                    <a style="padding-right: 15px;">
+                        <img class="media-object pull-left" src="http://cdn.chobani.com/prod/chobani.com/img/display/plain/blended-non-fat-plain-53oz.png" height="42px" width="42px">
+                        <div class="media-body">
+                            <span style="text-align:left;">
+                                Greek Yogurt
+                                <span style="float:right;"><i onclick="delete_object(this)" style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></span>
+                            </span>
+                            <p>Amount: 200g</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="table-view-cell media">
+                    <a style="padding-right: 15px;">
+                        <img class="media-object pull-left" src="http://cdn.chobani.com/prod/chobani.com/img/display/plain/blended-non-fat-plain-53oz.png" height="42px" width="42px">
+                        <div class="media-body">
+                            <span style="text-align:left;">
+                                Greek Yogurt
+                                <span style="float:right;"><i onclick="delete_object(this)" style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></span>
+                            </span>
+                            <p>Amount: 200g</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="table-view-cell media">
+                    <a style="padding-right: 15px;">
+                        <img class="media-object pull-left" src="http://cdn.chobani.com/prod/chobani.com/img/display/plain/blended-non-fat-plain-53oz.png" height="42px" width="42px">
+                        <div class="media-body">
+                            <span style="text-align:left;">
+                                Greek Yogurt
+                                <span style="float:right;"><i onclick="delete_object(this)" style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></span>
+                            </span>
+                            <p>Amount: 200g</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="table-view-cell media">
+                    <a style="padding-right: 15px;">
+                        <img class="media-object pull-left" src="http://cdn.chobani.com/prod/chobani.com/img/display/plain/blended-non-fat-plain-53oz.png" height="42px" width="42px">
+                        <div class="media-body">
+                            <span style="text-align:left;">
+                                Greek Yogurt
+                                <span style="float:right;"><i onclick="delete_object(this)" style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></span>
+                            </span>
+                            <p>Amount: 200g</p>
+                        </div>
+                    </a>
+                </li>
                 <?php if(isset($_POST['food_menu']) && $_POST['food_menu'] == '#eat1300'){ ?>
 
                     <li class="table-view-cell media">
@@ -139,22 +187,23 @@ print_r($_POST);
                 <?php } ?>
             </ul>
             <div align="center" id="add_food_button">
-                <a id="add_food" data-parent="#eat1300" style="padding: 5px 0; width: 50%" class="btn btn-block btn-positive">Add food</a>
+                <button id="add_food" data-parent="#eat1300" style="padding: 5px 0; width: 50%" class="btn btn-block btn-positive">Add food</button>
                 <hr>
             </div>
         </div>
     </ul>
     <div align="center" style="margin-bottom: 5px" class="bar bar-standard bar-footer-secondary">
-        <button style="width: 45%; display: inline" id="edit_button" class="btn btn-block btn-positive">Add meal</button>
+        <button style="width: 45%; display: inline" id="add_meal_button" class="btn btn-block btn-positive">Add meal</button>
         <button style="width: 45%; display: inline" id="edit_button" class="btn btn-block btn-negative">Delete meal</button>
     </div>
+
+    <!-- ADD FOOD MODAL -->
     <div id="add_food_modal" class="modal">
         <header class="bar bar-nav">
             <a class="icon icon-close pull-right" href="#add_food_modal"></a>
             <h1 id="add_food_modal_header" class="title">Modal</h1>
         </header>
 
-        <!-- ADD FOOD MODAL -->
         <div class="content">
             <form class="content-padded" style="padding-bottom: 20px" action="/index.php?p=diet-plans" method="POST">
                 <input id="food_menu" name="food_menu" type="text" style="display: none">
@@ -165,50 +214,27 @@ print_r($_POST);
                 <button type="submit" class="btn btn-positive btn-block">Add</button>
             </form>
         </div>
-        <!-- END FOOD MODAL -->
+    </div>
+    <!-- END FOOD MODAL -->
 
-        <!-- Settings Modal -->
-        <div id="settingsModal" class="modal">
-            <header class="bar bar-nav">
-                <a class="icon icon-close pull-right" href="#settingsModal"></a>
-                <h1 class="title">Settings Example</h1>
-            </header>
+    <!-- ADD MEAL MODAL -->
+    <div id="add_meal_modal" class="modal">
+        <header class="bar bar-nav">
+            <a class="icon icon-close pull-right" href="#add_meal_modal"></a>
+            <h1 class="title">Add meal</h1>
+        </header>
 
-            <div class="content">
-                <form class="input-group">
-                    <input type="text" placeholder="Full name">
-                    <input type="email" placeholder="Email">
-                    <input type="text" placeholder="Username">
-                </form>
-
-                <h5 class="content-padded">App settings</h5>
-
-                <ul class="table-view">
-                    <li class="table-view-cell media">
-                        <span class="media-object pull-left icon icon-sound"></span>
-                        <div class="media-body">
-                            Enable sounds
-                        </div>
-                        <div class="toggle">
-                            <div class="toggle-handle"></div>
-                        </div>
-                    </li>
-                    <li class="table-view-cell media">
-                        <span class="media-object pull-left icon icon-person"></span>
-                        <div class="media-body">
-                            Parental controls
-                        </div>
-                        <div class="toggle">
-                            <div class="toggle-handle"></div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="content-padded">
-                    <button class="btn btn-positive btn-block">Save settings</button>
-                </div>
-            </div>
+        <div class="content">
+            <form id="add_meal_form" class="content-padded" style="padding-bottom: 20px">
+                <h4>Meal name: </h4>
+                <input id="meal_name" name="meal_name" type="text" min="0" placeholder="Enter meal name...">
+                <h4>Meal time: </h4>
+                <input id="meal_time" name="meal_time" type="time" min="0" placeholder="Enter meal time...">
+                <a id="add_meal" class="btn btn-positive btn-block">Add</a>
+            </form>
         </div>
     </div>
+    <!-- END MEAL MODAL -->
 
 </div>
 

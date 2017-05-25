@@ -49,3 +49,28 @@ BEGIN
 	RETURN Value;
 END ;
 
+/********************************/
+
+DROP FUNCTION IF EXISTS `meal_exists`;
+
+CREATE DEFINER = `php`@`%` FUNCTION `meal_exists`(`meal_time` varchar(255), `token` varchar(255))
+ RETURNS int(1)
+BEGIN
+	DECLARE s INT(1);
+
+	DECLARE user_id INT(11);
+	SET user_id = get_user_by_token(token);
+
+	#IF EXISTS (SELECT * FROM users_diet_plan WHERE users.username = username) THEN SET s = 1;
+	IF user_id THEN
+		IF EXISTS (SELECT users_diet_plan.id FROM users_diet_plan WHERE users_diet_plan.time = meal_time AND users_diet_plan.user_id = user_id) THEN SET s = 1;
+		ELSE SET s = 0;
+		END IF;
+
+		ELSE SET s = 0;
+	END IF;
+
+	RETURN s;
+END ;
+
+/********************************/

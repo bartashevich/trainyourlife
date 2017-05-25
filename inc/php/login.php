@@ -69,8 +69,8 @@
         <img style="max-width: 100%" src="/uploads/images/images.jpg">
     </div>
     <form id="login" class="content-padded">
-        <input id="email_username" name="email_username" type="text" placeholder="Email / Username">
-        <input id="password" name="password" type="password" placeholder="Password">
+        <input onkeydown = "if (event.keyCode == 13) login();" id="email_username" name="email_username" type="text" placeholder="Email / Username">
+        <input onkeydown = "if (event.keyCode == 13) login();" id="password" name="password" type="password" placeholder="Password">
         <a onclick="login()" class="btn btn-positive btn-block">Login</a>
         <!--<a href="/index.php?p=home" data-transition="slide-in" class="btn btn-primary btn-block">Continue without login...</a>-->
     </form>
