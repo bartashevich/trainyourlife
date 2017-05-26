@@ -100,9 +100,26 @@ function logout_button(){
     });
 }
 
-function delete_object(object){
+function delete_food(object){
     if(getConfirmation($.trim($(object).closest("#object_name").text()))){
-        $(object).closest( "li" ).remove();
+        var myData = {};
+
+        myData['food_id'] = $(object).closest( "li" ).attr('data-id');
+
+        $.ajax({
+            url: 'lib/php/classes/remove_food.php',
+            type: "POST",
+            data: myData,
+            success: function(result){
+                console.log(result);
+                if(result == '0'){
+                    $(object).closest( "li" ).remove();
+                }
+                else{
+                    console.log('error');
+                }
+            }
+        });
     }
 }
 
@@ -139,6 +156,25 @@ $(document).on("click","#add_meal",function() {
             else{
                 $('#add_meal_fail span').text("error");
                 $('#add_meal_fail').show('slow').delay(3000).hide('slow');
+            }
+        }
+    });
+});
+
+//ADD FOOD MEAL TO DATABASE
+$(document).on("click","#add_food_meal",function() {
+    $.ajax({
+        url: 'lib/php/classes/add_food_meal.php',
+        type: "POST",
+        data: $("#add_food_form").serialize(),
+        success: function(result){
+            console.log(result);
+            if(result == '0'){
+                location.reload();
+            }
+            else{
+                $('#add_food_fail span').text("Error, please reload page.");
+                $('#add_food_fail').show('slow').delay(3000).hide('slow');
             }
         }
     });

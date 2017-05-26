@@ -25,6 +25,10 @@ table.food th{
     text-align: center;
 }
 
+table.add_food_table td{
+    padding: 0 5px;
+}
+
 .disable-a{
     pointer-events: none;
 }

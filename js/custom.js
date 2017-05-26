@@ -37,9 +37,8 @@ function showExercises() {
 //ADD FOOD BUTTON
 $(document).on("click","#add_food",function() {
     $('#add_food_modal').attr('class','modal active');
-    $('#add_food_modal_header').text($(this).attr('data-parent'));
-    $('#food_menu').val($(this).attr('data-parent'));
-    //console.log($(this).attr('data-parent'));
+    $('#add_food_modal_header').text('Add food to '+$(this).attr('data-time'));
+    $('#food_menu').val($(this).attr('data-time'));
 });
 
 //ADD EXERCISE BUTTON
@@ -47,12 +46,10 @@ $(document).on("click","#add_exercise",function() {
     $('#add_exercise_modal').attr('class','modal active');
     $('#add_exercise_modal_header').text($(this).attr('data-parent'));
     $('#exercise_menu').val($(this).attr('data-parent'));
-    //console.log($(this).attr('data-parent'));
 });
 
 //ADD MEAL BUTTON
 $(document).on("click","#add_meal_button",function() {
-    console.log('open');
     $('#add_meal_modal').attr('class','modal active');
 });
 
