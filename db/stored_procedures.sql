@@ -62,3 +62,37 @@ BEGIN
 	END IF;
 END ;
 
+/******************************************/
+
+DROP PROCEDURE IF EXISTS `add_meal`;
+
+CREATE DEFINER = `php`@`%` PROCEDURE `add_meal`(IN `meal_name` varchar(255),IN `time` time,IN `avatar` varchar(255),IN `token` varchar(255),OUT `result` int(1))
+BEGIN
+	DECLARE user_id INT(11);
+	SET user_id = get_user_by_token(token);
+
+	SET result = 0; # no problem
+
+	IF user_id IS NULL THEN SET result = 1; # user doesnt exists/logged in
+	ELSEIF meal_exists(time,token) THEN SET result = 2; # meal already exists
+	ELSE
+				INSERT INTO `users_diet_plan` (`name`,`time`,`avatar`,`user_id`) VALUES (meal_name, time, avatar, user_id);
+	END IF;
+
+END;
+
+/******************************************/
+
+DROP PROCEDURE IF EXISTS `get_diet_plans`;
+
+CREATE DEFINER = `php`@`%` PROCEDURE `get_diet_plans`(IN token varchar(255))
+BEGIN
+	DECLARE user_id INT(11);
+	SET user_id = get_user_by_token(token);
+
+	#SELECT users_diet_plan.name, users_diet_plan.protein INTO name, protein FROM users_diet_plan WHERE users_diet_plan.user_id = user_id;
+	SELECT users_diet_plan.id, users_diet_plan.name, users_diet_plan.protein, users_diet_plan.carbs, users_diet_plan.fat, users_diet_plan.calories, users_diet_plan.time, users_diet_plan.avatar FROM users_diet_plan WHERE users_diet_plan.user_id = user_id ORDER BY users_diet_plan.time ASC;
+
+END ;
+
+/******************************************/
