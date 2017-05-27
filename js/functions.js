@@ -113,7 +113,8 @@ function delete_food(object){
             success: function(result){
                 console.log(result);
                 if(result == '0'){
-                    $(object).closest( "li" ).remove();
+                    location.reload();
+                    //$(object).closest( "li" ).remove();
                 }
                 else{
                     console.log('error');
@@ -137,7 +138,7 @@ function getConfirmation(name){
 //ADD MEAL TO DATABASE
 $(document).on("click","#add_meal",function() {
     $.ajax({
-            url: 'lib/php/classes/add_meal.php',
+        url: 'lib/php/classes/add_meal.php',
         type: "POST",
         data: $("#add_meal_form").serialize(),
         success: function(result){
@@ -159,6 +160,20 @@ $(document).on("click","#add_meal",function() {
             }
         }
     });
+});
+
+//REMOVE MEAL FROM DATABASE
+$(document).on("click","#remove_meal",function() {
+    if(getConfirmation($('#remove_meal_select option:selected').text())){
+        $.ajax({
+            url: 'lib/php/classes/remove_meal.php',
+            type: "POST",
+            data: $("#remove_meal_form").serialize(),
+            success: function(result){
+                location.reload();
+            }
+        });
+    }
 });
 
 //ADD FOOD MEAL TO DATABASE

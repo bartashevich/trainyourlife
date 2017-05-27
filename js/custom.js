@@ -49,6 +49,11 @@ $(document).on("click","#add_exercise",function() {
 });
 
 //ADD MEAL BUTTON
+$(document).on("click","#remove_meal_button",function() {
+    $('#remove_meal_modal').attr('class','modal active');
+});
+
+//REMOVE MEAL BUTTON
 $(document).on("click","#add_meal_button",function() {
     $('#add_meal_modal').attr('class','modal active');
 });
