@@ -18,7 +18,7 @@
     <ul class="table-view">
         <?php foreach ($exercise_group_list as $group){ ?>
             <li class="table-view-cell media">
-                <a class="navigate-right" href="/index.php?p=exercise-group" data-transition="slide-in" style="padding-right: 15px;">
+                <a class="navigate-right" href="/index.php?p=exercise_list&group=<?=$group['id']?>" data-transition="slide-in" style="padding-right: 15px;">
                     <img class="media-object pull-left" src="<?=$group['avatar']?>" height="42px" width="42px">
                     <div class="media-body">
                         <?=$group['name']?>
@@ -27,7 +27,7 @@
             </li>
         <?php } ?>
         <li class="table-view-cell media">
-            <a class="navigate-right" href="/index.php?p=exercise-group" data-transition="slide-in" style="padding-right: 15px;">
+            <a class="navigate-right" href="/index.php?p=exercise_list" data-transition="slide-in" style="padding-right: 15px;">
                 <img class="media-object pull-left" src="/img/full-body-workout.jpg" height="42px" width="42px">
                 <div class="media-body">
                     All exercises

@@ -1,7 +1,7 @@
 <?php
 include "header.php";
 include "low_navbar.php";
-include "lib/php/diet-plans.php";
+include "lib/php/diet_plans.php";
 
 ?>
 
