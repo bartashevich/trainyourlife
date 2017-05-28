@@ -22,6 +22,7 @@ $(document).on("click","#exercise-menu",function() {
     }
 });
 
+//GET FOOD FROM DATABASE
 $(document).on("change","#food_from_database",function() {
     if($('#food_from_database').val() != ''){
         var myData = {};
@@ -49,6 +50,54 @@ $(document).on("change","#food_from_database",function() {
                 }
             }
         });
+    }
+});
+
+//GET EXERCISE FROM DATABASE BY GROUP
+$(document).on("change","#exercise_group_from_database",function() {
+    if($('#exercise_group_from_database').val() != '0'){
+        var myData = {};
+
+        myData['exercise_id'] = $('#exercise_group_from_database').val();
+
+        $.ajax({
+            url: 'lib/php/classes/get_exercise_by_group.php',
+            type: "POST",
+            data: myData,
+            success: function(result){
+                $('#exercise_name_from_database').html('<option value="0">Choose...</option>');
+                if(result == '1'){
+                    console.log('no_exercises');
+                }
+                else{
+                    var obj = JSON.parse(result);
+
+                    for($i = 0; $i < obj.length; $i++){
+                        $('#exercise_name_from_database')
+                            .append($("<option></option>")
+                                .attr("value",obj[$i]['id'])
+                                .attr("data-unit",obj[$i]['unit'])
+                                .text(obj[$i]['name']));
+                    }
+                }
+            }
+        });
+    }
+    else{
+        $('#exercise_name_from_database').html("");
+    }
+});
+
+//GET EXERCISE FROM DATABASE
+$(document).on("change","#exercise_name_from_database",function() {
+    if($('#exercise_name_from_database').val() != '' && $('#exercise_name_from_database').val() != '0'){
+        var myData = {};
+
+        myData['exercise_unit'] = $('#exercise_name_from_database option:selected').attr('data-unit');
+        myData['exercise_name'] = $('#exercise_name_from_database option:selected').text();
+
+        $('#exercise_unit').val(myData['exercise_unit']);
+        $('#exercise_name').val(myData['exercise_name']);
     }
 });
 

@@ -29,7 +29,7 @@ $exercise_icons_query->execute();
 $exercise_icons = $exercise_icons_query->fetchAll();
 $exercise_icons_query->closeCursor();
 
-/*$food_list_query = $db->prepare("CALL get_food_list()");
-$food_list_query->execute();
-$food_list = $food_list_query->fetchAll();
-$food_list_query->closeCursor();*/
+$exercise_group_list_query = $db->prepare("CALL get_exercise_group_list()");
+$exercise_group_list_query->execute();
+$exercise_group_list = $exercise_group_list_query->fetchAll();
+$exercise_group_list_query->closeCursor();

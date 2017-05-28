@@ -1,7 +1,7 @@
 <?php
 include "header.php";
 include "low_navbar.php";
-include "lib/php/exercise-plans.php";
+include "lib/php/exercise_plans.php";
 ?>
 
     <header class="bar bar-nav">
@@ -69,22 +69,44 @@ include "lib/php/exercise-plans.php";
                 <form id="add_exercise_form" class="content-padded" style="padding-bottom: 20px">
                     <input id="exercise_plan" name="exercise_plan" type="text" style="display: none">
                     <h4>Select from our database: </h4>
-                    <select id="exercise_from_database" name="exercise_from_database" style="width: 100%; height: 40px; margin-bottom: 0">
+                    <table class="add_food_table" style="width: 100%">
+                        <tr align="center">
+                            <th><p>Group</p></th>
+                            <th><p>Exercise</p></th>
+                        </tr>
+                        <tr align="center">
+                            <td style="width: 50%">
+                                <select style="width: 100%; height: 40px; margin-bottom: 0" id="exercise_group_from_database" name="exercise_group_from_database">
+                                    <option value="0">Choose...</option>
+                                    <?php
+                                    foreach ($exercise_group_list as $group) {
+                                        echo '<option value="'.$group['id'].'">'.$group['name'].'</option>';
+                                    }
+                                    ?>
+                                </select>
+                            </td style="width: 50%">
+                            <td>
+                                <select style="width: 100%; height: 40px; margin-bottom: 0" id="exercise_name_from_database" name="exercise_name_from_database">
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--<select id="exercise_from_database" name="exercise_from_database" style="width: 100%; height: 40px; margin-bottom: 0">
                         <option></option>
                         <?php
                         foreach ($exercise_list as $exercise) {
                             echo '<option value="'.$exercise['id'].'">'.$exercise['name'].'</option>';
                         }
                         ?>
-                    </select>
+                    </select>-->
                     <div style="padding: 10px 0"><hr></div>
                     <h4>Exercise name: </h4>
                     <input id="exercise_name" name="exercise_name" type="text" min="0" placeholder="Enter exercise name...">
                     <h4>Exercise quanty: </h4>
                     <input style="width: 78%" id="exercise_quanty" name="exercise_quanty" type="number" min="1" placeholder="Enter exercise quanty...">
                     <select id="exercise_unit" name="exercise_unit" style="width: 20%; height: 40px">
-                        <option>min</option>
-                        <option>rep</option>
+                        <option value="min">min</option>
+                        <option value="rep">rep</option>
                     </select>
                     <a id="add_exercise_to_plan" class="btn btn-positive btn-block">Add</a>
                     <div id="add_exercise_fail" align="center" style="display: none">
