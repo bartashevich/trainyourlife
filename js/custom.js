@@ -17,17 +17,9 @@ $(document).on("click","#exercise-menu",function() {
         $($(this).attr('data-target')).hide('slow');
     }
     else{
-        $('div[id*="exercise"]').hide();
+        $('div[id*="activiy"]').hide();
         $($(this).attr('data-target')).show('slow');
     }
-});
-
-
-//ADD FOOD BUTTON
-$(document).on("click","#add_food",function() {
-    $('#add_food_modal').attr('class','modal active');
-    $('#add_food_modal_header').text('Add food to '+$(this).attr('data-time'));
-    $('#food_menu').val($(this).attr('data-time'));
 });
 
 $(document).on("change","#food_from_database",function() {
@@ -60,21 +52,38 @@ $(document).on("change","#food_from_database",function() {
     }
 });
 
+//ADD FOOD BUTTON
+$(document).on("click","#add_food",function() {
+    $('#add_food_modal').attr('class','modal active');
+    $('#add_food_modal_header').text('Add food to '+$(this).attr('data-time'));
+    $('#food_menu').val($(this).attr('data-time'));
+});
+
 //ADD EXERCISE BUTTON
 $(document).on("click","#add_exercise",function() {
     $('#add_exercise_modal').attr('class','modal active');
-    $('#add_exercise_modal_header').text($(this).attr('data-parent'));
-    $('#exercise_menu').val($(this).attr('data-parent'));
+    $('#add_exercise_modal_header').text('Add exercise to '+$(this).attr('data-name'));
+    $('#exercise_plan').val($(this).attr('data-name'));
 });
 
-//ADD MEAL BUTTON
+//REMOVE MEAL BUTTON
 $(document).on("click","#remove_meal_button",function() {
     $('#remove_meal_modal').attr('class','modal active');
 });
 
-//REMOVE MEAL BUTTON
+//REMOVE PLAN BUTTON
+$(document).on("click","#remove_plan_button",function() {
+    $('#remove_plan_modal').attr('class','modal active');
+});
+
+//ADD MEAL BUTTON
 $(document).on("click","#add_meal_button",function() {
     $('#add_meal_modal').attr('class','modal active');
+});
+
+//ADD PLAN BUTTON
+$(document).on("click","#add_plan_button",function() {
+    $('#add_plan_modal').attr('class','modal active');
 });
 
 function dailyWeight() {
@@ -207,37 +216,3 @@ Highcharts.chart('muscle_spider_chart', {
     }]
 
 });
-
-function edit_food_plan(){
-    if($('#edit_button').attr('class') == 'btn btn-block btn-positive'){
-        $('div[id="add_food_button"]').show();
-        $('#edit_button').text("Confirm plan");
-        $("#edit_button").attr('class', 'btn btn-block btn-negative');
-        $('a[id="navigate_right"]').attr('class', 'disable-a');
-        $('p[id="delete_food"]').show();
-    }
-    else if($('#edit_button').attr('class') == 'btn btn-block btn-negative'){
-        $('div[id="add_food_button"]').hide();
-        $('#edit_button').text("Edit plan");
-        $("#edit_button").attr('class', 'btn btn-block btn-positive');
-        $('a[id="navigate_right"]').attr('class', 'navigate-right');
-        $('p[id="delete_food"]').hide();
-    }
-}
-
-function edit_exercise_plan(){
-    if($('#edit_button2').attr('class') == 'btn btn-block btn-positive'){
-        $('div[id="add_exercise_button"]').show();
-        $('#edit_button2').text("Confirm plan");
-        $("#edit_button2").attr('class', 'btn btn-block btn-negative');
-        $('a[id="navigate_right"]').attr('class', 'disable-a');
-        $('p[id="delete_exercise"]').show();
-    }
-    else if($('#edit_button2').attr('class') == 'btn btn-block btn-negative'){
-        $('div[id="add_exercise_button"]').hide();
-        $('#edit_button2').text("Edit plan");
-        $("#edit_button2").attr('class', 'btn btn-block btn-positive');
-        $('a[id="navigate_right"]').attr('class', 'navigate-right');
-        $('p[id="delete_exercise"]').hide();
-    }
-}
