@@ -282,3 +282,22 @@ $(document).on("click","#add_exercise_to_plan",function() {
         }
     });
 });
+
+//ADD EXERCISE TO HISTORY
+$(document).on("click","#add_exercise_to_history",function() {
+    $.ajax({
+        url: 'lib/php/classes/add_exercise_to_history.php',
+        type: "POST",
+        data: $("#add_exercise_to_history_form").serialize(),
+        success: function(result){
+            console.log(result);
+            if(result == '0'){
+                $('#add_exercise_to_history_success').show('slow').delay(3000).hide('slow');
+                setTimeout(function(){ location.reload(); }, 3000);
+            }
+            else{
+                $('#add_exercise_to_history_fail').show('slow').delay(3000).hide('slow');
+            }
+        }
+    });
+});

@@ -27,11 +27,11 @@ include "lib/php/exercise_plans.php";
                         <?php
                         foreach ($exercise_in_plan[$plan['id']] as $exercise){ ?>
                             <li id="exercise-id-<?=$exercise['id']?>" data-id="<?=$exercise['id']?>" class="table-view-cell media">
-                                <a style="padding-right: 15px">
+                                <a href="/index.php?p=exercise_details&exercise=<?=$exercise['id']?>&previous=exercise_plans" style="padding-right: 15px">
                                     <div class="media-body">
                                         <span id="object_name" style="text-align:left;">
                                             <?=$exercise['name']?>
-                                            <span style="float:right;"><i onclick="delete_exercise(this)" style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></span>
+                                            <span style="float:right;"><button class="btn btn-primary">More</button>&nbsp;<i onclick="delete_exercise(this)" style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></span>
                                         </span>
                                         <?php
                                             if($exercise['unit'] == 'min'){

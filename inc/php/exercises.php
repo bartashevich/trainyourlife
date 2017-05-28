@@ -8,7 +8,7 @@ include "low_navbar.php";
         <h1 class="title">Exercises</h1>
     </header>
     <div class="content">
-        <ul class="table-view">
+        <ul class="table-view" style="margin-bottom: 91px">
             <li class="table-view-cell media">
                 <a class="navigate-right" href="/index.php?p=exercise_plans" data-transition="slide-in" style="padding-right: 15px;">
                     <img class="media-object pull-left" src="/img/exercise-plan.jpg" height="42px" width="42px">

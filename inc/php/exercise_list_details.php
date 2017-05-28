@@ -10,7 +10,7 @@
         exit();
     }
 
-    $exercise_query = $db->prepare("CALL get_exercise_by_id(".$db->quote($exercise_id).")");
+    $exercise_query = $db->prepare("CALL get_exercise_from_list_by_id(".$db->quote($exercise_id).")");
     $exercise_query->execute();
     $exercise = $exercise_query->fetch();
     $exercise_query->closeCursor();
