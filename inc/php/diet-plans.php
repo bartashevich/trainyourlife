@@ -7,7 +7,7 @@ include "lib/php/diet-plans.php";
 
 <header class="bar bar-nav">
     <a class="icon icon-left-nav pull-left" href="/index.php?p=food" data-transition="slide-out"></a>
-    <a class="icon icon-gear pull-right" href="/index.php?p=settings" data-transition="slide-out"></a>
+    <a class="icon icon-gear pull-right" href="#settings_modal" data-transition="slide-out"></a>
     <h1 class="title">My diet</h1>
 </header>
 <div class="content">
@@ -24,13 +24,13 @@ include "lib/php/diet-plans.php";
                                 <th><p>Protein:</p></th>
                                 <th><p>Carbs:</p></th>
                                 <th><p>Fat:</p></th>
-                                <th><p>Calories:</p></th>
+                                <th><p>Energy:</p></th>
                             </tr>
                             <tr align="center">
-                                <td><p><?=$plan['protein'] ?>g</p></td>
-                                <td><p><?=$plan['carbs'] ?>g</p></td>
-                                <td><p><?=$plan['fat'] ?>g</p></td>
-                                <td><p><?=$plan['calories'] ?></p></td>
+                                <td><p><?=$plan['protein'] ?> g</p></td>
+                                <td><p><?=$plan['carbs'] ?> g</p></td>
+                                <td><p><?=$plan['fat'] ?> g</p></td>
+                                <td><p><?=$plan['calories'] ?> cal</p></td>
                             </tr>
                         </table>
                     </div>
@@ -71,12 +71,22 @@ include "lib/php/diet-plans.php";
     <div id="add_food_modal" class="modal">
         <header class="bar bar-nav">
             <a class="icon icon-close pull-right" href="#add_food_modal"></a>
-            <h1 id="add_food_modal_header" class="title">Modal</h1>
+            <h1 id="add_food_modal_header" class="title">Add food</h1>
         </header>
 
         <div class="content">
             <form id="add_food_form" class="content-padded" style="padding-bottom: 20px">
                 <input id="food_menu" name="food_menu" type="text" style="display: none">
+                <h4>Select from our database: </h4>
+                <select id="food_from_database" name="food_from_database" style="width: 100%; height: 40px; margin-bottom: 0">
+                    <option></option>
+                    <?php
+                        foreach ($food_list as $food) {
+                            echo '<option value="'.$food['id'].'">'.$food['name'].'</option>';
+                        }
+                    ?>
+                </select>
+                <div style="padding: 10px 0"><hr></div>
                 <h4>Food name: </h4>
                 <input id="food_name" name="food_name" type="text" min="0" placeholder="Enter food name...">
                 <h4>Food quanty: </h4>
@@ -124,10 +134,11 @@ include "lib/php/diet-plans.php";
                 <input id="meal_time" name="meal_time" type="time" min="0" placeholder="Enter meal time...">
                 <h4>Icon: </h4>
                 <div style="padding-bottom: 15px">
-                    <?php for($i = 0; $i < 20; $i++){ ?>
+                    <?php //for($i = 0; $i < 20; $i++){ ?>
+                    <?php foreach ($diet_icons as $icon){ ?>
                         <label>
-                            <input type="radio" name="avatar" value="/img/lunch-logo.lpg" />
-                            <img height="46px" width="46px" src="/img/lunch-logo.lpg">
+                            <input type="radio" name="avatar" value="<?=$icon['source'] ?>" />
+                            <img height="46px" width="46px" src="<?=$icon['source'] ?>">
                         </label>
                     <?php } ?>
                 </div>
@@ -144,7 +155,7 @@ include "lib/php/diet-plans.php";
     <div id="remove_meal_modal" class="modal">
         <header class="bar bar-nav">
             <a class="icon icon-close pull-right" href="#remove_meal_modal"></a>
-            <h1 id="remove_meal_modal_header" class="title">Modal</h1>
+            <h1 id="remove_meal_modal_header" class="title">Remove meal</h1>
         </header>
 
         <div class="content">

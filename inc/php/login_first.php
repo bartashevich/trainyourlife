@@ -4,7 +4,6 @@ include "low_navbar.php";
 ?>
 
     <header class="bar bar-nav">
-        <a class="icon icon-gear pull-right"></a>
         <h1 class="title">Login first</h1>
     </header>
     <div class="content">

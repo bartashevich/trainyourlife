@@ -5,7 +5,7 @@
 
 <header class="bar bar-nav">
     <a class="icon icon-left-nav pull-left" href="/index.php?p=exercises" data-transition="slide-out"></a>
-    <a class="icon icon-gear pull-right"></a>
+    <a class="icon icon-gear pull-right" href="#settings_modal" data-transition="slide-out"></a>
     <h1 class="title">Exercises</h1>
 </header>
 <div class="content">

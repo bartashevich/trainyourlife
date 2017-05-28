@@ -170,6 +170,7 @@ $(document).on("click","#remove_meal",function() {
             type: "POST",
             data: $("#remove_meal_form").serialize(),
             success: function(result){
+                console.log(result);
                 location.reload();
             }
         });

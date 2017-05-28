@@ -42,4 +42,32 @@ function print_low_navbar($active_tab){
                     <span class="tab-label">History</span>
                 </a>
             </nav>';
+
+    echo '<!-- SETTINGS MODAL -->
+    <div id="settings_modal" class="modal">
+        <header class="bar bar-nav">
+            <a class="icon icon-close pull-right" href="#settings_modal"></a>
+            <h1 class="title">Settings</h1>
+        </header>
+        <div class="content">
+            <ul class="table-view">
+                <li class="table-view-cell">
+                    Login Status
+                    <div id="logout_button" onclick="logout_button()" class="toggle active">
+                        <div class="toggle-handle"></div>
+                    </div>
+                </li>
+                <li style="padding-right: 15px" class="table-view-cell">
+                    <span style="text-align:left">Language</span>
+                    <span style="float: right">
+                        <select style="height: 40px; margin-bottom: 0">
+                            <option>English</option>
+                            <option>Portuguese</option>
+                        </select>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- REMOVE MEAL MODAL -->';
 }

@@ -5,7 +5,7 @@
 ?>
 
 <header class="bar bar-nav">
-    <a href="/index.php?p=settings" data-transition="slide-in" class="icon icon-gear pull-right"></a>
+    <a class="icon icon-gear pull-right" href="#settings_modal" data-transition="slide-out"></a>
     <h1 class="title">Home</h1>
 </header>
 <div class="content">

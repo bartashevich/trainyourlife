@@ -41,6 +41,36 @@ $(document).on("click","#add_food",function() {
     $('#food_menu').val($(this).attr('data-time'));
 });
 
+$(document).on("change","#food_from_database",function() {
+    if($('#food_from_database').val() != ''){
+        var myData = {};
+
+        myData['food_id'] = $('#food_from_database').val();
+
+        $.ajax({
+            url: 'lib/php/classes/get_food_by_id.php',
+            type: "POST",
+            data: myData,
+            success: function(result){
+                if(result == '1'){
+                    console.log('error');
+                    location.reload();
+                }
+                else{
+                    var obj = JSON.parse(result);
+
+                    $('#food_name').val(obj['name']);
+                    $('#food_unit').val(obj['unit']);
+                    $('#food_protein').val(obj['protein']);
+                    $('#food_carbs').val(obj['carbs']);
+                    $('#food_fat').val(obj['fat']);
+                    $('#food_calories').val(obj['calories']);
+                }
+            }
+        });
+    }
+});
+
 //ADD EXERCISE BUTTON
 $(document).on("click","#add_exercise",function() {
     $('#add_exercise_modal').attr('class','modal active');

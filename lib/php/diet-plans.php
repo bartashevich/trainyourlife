@@ -24,6 +24,12 @@ foreach ($diet_plans as $plan){
     $food_in_diet_plan[$plan['id']] = $diet_food;
 }
 
-foreach ($food_in_diet_plan['8'] as $test){
-    print_r($test);
-}
+$diet_icons_query = $db->prepare("CALL get_meal_logo()");
+$diet_icons_query->execute();
+$diet_icons = $diet_icons_query->fetchAll();
+$diet_icons_query->closeCursor();
+
+$food_list_query = $db->prepare("CALL get_food_list()");
+$food_list_query->execute();
+$food_list = $food_list_query->fetchAll();
+$food_list_query->closeCursor();
