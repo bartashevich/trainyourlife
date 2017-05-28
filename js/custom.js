@@ -10,7 +10,7 @@ $(document).on("click","#diet-menu",function() {
     }
 });
 
-/*
+//DROPDOWM MENU EXERCISE
 $(document).on("click","#exercise-menu",function() {
     if($($(this).attr('data-target')).is(':visible'))
     {
@@ -20,19 +20,8 @@ $(document).on("click","#exercise-menu",function() {
         $('div[id*="exercise"]').hide();
         $($(this).attr('data-target')).show('slow');
     }
-});*/
+});
 
-
-function showExercises() {
-    if($('#exercise1000').css('display') == 'none')
-    {
-        $("#exercise1000").show('slow');
-    }
-    else
-    {
-        $("#exercise1000").hide('slow');
-    }
-}
 
 //ADD FOOD BUTTON
 $(document).on("click","#add_food",function() {
