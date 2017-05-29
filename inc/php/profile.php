@@ -3,11 +3,25 @@ include "header.php";
 include "low_navbar.php";
 include "lib/php/db.php";
 
-//EXERCISE DETAILS
-/*$weight_query = $db->prepare("CALL get_exercise_by_id(".$db->quote($exercise_id).")");
+//USERS WEIGHT HISTORY
+$weight_query = $db->prepare("CALL get_users_weight(".$db->quote($_SESSION['token']).")");
 $weight_query->execute();
-$exercise = $weight_query->fetch();
-$weight_query->closeCursor();*/
+$weight = $weight_query->fetchAll();
+$weight_query->closeCursor();
+
+//CURRENT WEIGHT
+$current_weight_query = $db->prepare("CALL get_current_weight(".$db->quote($_SESSION['token']).")");
+$current_weight_query->execute();
+$current_weight = $current_weight_query->fetch();
+$current_weight_query->closeCursor();
+
+if($current_weight['weight'] != null){
+    $current_weight = $current_weight['weight']."kg";
+}
+else{
+    $current_weight = 'Unknown';
+}
+
 ?>
 
 <!-- Make sure all your bars are the first things in your <body> -->
@@ -19,18 +33,30 @@ $weight_query->closeCursor();*/
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div class="content">
     <div class="description" style="padding: 15px">
-        <h4 style="display: inline; text-align: left">Current weight: 50kg</h4><span style="float: right;"><a href="#add_weight_modal" class="btn btn-positive">Update</a></span>
+        <h4 style="display: inline; text-align: left">Current weight: <?=$current_weight?></h4><span style="float: right;"><a href="#add_weight_modal" data-transition="slide-out" class="btn btn-positive">Update</a></span>
     </div>
-    <div class="content-padded" align="center">
+    <div style="padding: 15px 0"><hr></div>
+    <div class="content-padded" align="center" style="padding-bottom: 50px">
         <h4>Your weight statistics</h4>
         <div class="segmented-control">
             <a class="control-item" onclick="dailyWeight()">Daily</a>
             <a class="control-item" onclick="monthlyWeight()">Monthly</a>
-            <a class="control-item" onclick="allWeight()">All time</a>
+            <a class="control-item active" onclick="$('#weight_container').show();$('#container').hide();">All time</a>
         </div>
-
-        <div style="padding-top: 10px" id="container">
-            <h5>Select option above...</h5>
+        <div style="padding-top: 10px; padding-right: 10px; display: none" id="container"></div>
+        <div style="padding-top: 10px" id="weight_container">
+            <table class="weight">
+                <tr>
+                    <th>Date</th>
+                    <th>Weight</th>
+                </tr>
+                <?php foreach ($weight as $measure){ ?>
+                <tr>
+                    <td><?=$measure['date']?></td>
+                    <td><?=$measure['weight']?> kg</td>
+                </tr>
+                <?php } ?>
+            </table>
         </div>
     </div>
 </div>
@@ -43,30 +69,22 @@ $weight_query->closeCursor();*/
     </header>
 
     <div class="content">
-        <form class="content-padded" style="padding-bottom: 20px">
+        <form id="add_weight_form" class="content-padded" style="padding-bottom: 20px">
             <h4>Your weight: </h4>
             <input id="weight_number" name="weight_number" type="number" step="0.01" min="0" placeholder="Enter your weight...">
             <h4>Date of measurement: </h4>
-            <input title="weight_date" id="weight_date" type="date" name="weight_date" max="2018-1-1" placeholder="Enter your mesurement date...">
-            <a href="#" onclick="$('#weight_number').val(''); $('#weight_date').val('');" class="btn btn-positive btn-block">Save</a>
+            <input title="weight_date" id="weight_date" type="date" name="weight_date" value="<?=date("Y-m-d")?>">
+            <a id="add_weight" name="add_weight" class="btn btn-positive btn-block">Save</a>
+            <div id="add_weight_success" align="center" style="display: none">
+                <span style="color: green">Your weight was registered.</span>
+            </div>
+            <div id="add_weight_fail" align="center" style="display: none">
+                <span style="color: red"></span>
+            </div>
         </form>
     </div>
 </div>
 <!-- ADD WEIGHT MODAL -->
-
-<script>
-    $( document ).ready(function() {
-        alert("ola");
-    });
-
-    $(document).on('load','#weight_date',function(){
-        alert('started');
-    });
-
-    $( window ).load(function() {
-        alert("ola");
-    });
-</script>
 
 
 <?php

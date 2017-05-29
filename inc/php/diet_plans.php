@@ -6,7 +6,6 @@ include "lib/php/diet_plans.php";
 ?>
 
 <header class="bar bar-nav">
-    <a class="icon icon-left-nav pull-left" href="/index.php?p=food" data-transition="slide-out"></a>
     <a class="icon icon-gear pull-right" href="#settings_modal" data-transition="slide-out"></a>
     <h1 class="title">My diet</h1>
 </header>

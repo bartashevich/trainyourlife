@@ -5,7 +5,6 @@ include "lib/php/exercise_plans.php";
 ?>
 
     <header class="bar bar-nav">
-        <a class="icon icon-left-nav pull-left" href="/index.php?p=exercises" data-transition="slide-out"></a>
         <a class="icon icon-gear pull-right" href="#settings_modal" data-transition="slide-out"></a>
         <h1 class="title">Exercise plans</h1>
     </header>
@@ -27,11 +26,11 @@ include "lib/php/exercise_plans.php";
                         <?php
                         foreach ($exercise_in_plan[$plan['id']] as $exercise){ ?>
                             <li id="exercise-id-<?=$exercise['id']?>" data-id="<?=$exercise['id']?>" class="table-view-cell media">
-                                <a href="/index.php?p=exercise_details&exercise=<?=$exercise['id']?>&previous=exercise_plans" style="padding-right: 15px">
+                                <a style="padding-right: 15px">
                                     <div class="media-body">
                                         <span id="object_name" style="text-align:left;">
                                             <?=$exercise['name']?>
-                                            <span style="float:right;"><button class="btn btn-primary">More</button>&nbsp;<i onclick="delete_exercise(this)" style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></span>
+                                            <span style="float:right;"><button onclick="window.location = '/index.php?p=exercise_details&exercise=<?=$exercise['id']?>&previous=exercise_plans'" class="btn btn-primary">More</button>&nbsp;<i onclick="delete_exercise(this)" style="font-size: 25px" class="fa fa-times" aria-hidden="true"></i></span>
                                         </span>
                                         <?php
                                             if($exercise['unit'] == 'min'){

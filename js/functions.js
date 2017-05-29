@@ -301,3 +301,27 @@ $(document).on("click","#add_exercise_to_history",function() {
         }
     });
 });
+
+//ADD EXERCISE TO HISTORY
+$(document).on("click","#add_weight",function() {
+    $.ajax({
+        url: 'lib/php/classes/add_weight.php',
+        type: "POST",
+        data: $("#add_weight_form").serialize(),
+        success: function(result){
+            console.log(result);
+            if(result == '0'){
+                $('#add_weight_success').show('slow').delay(3000).hide('slow');
+                setTimeout(function(){ location.reload(); }, 3000);
+            }
+            else if(result == '2'){
+                $('#add_weight_fail span').text("Already exists weight for that date.");
+                $('#add_weight_fail').show('slow').delay(3000).hide('slow');
+            }
+            else{
+                $('#add_weight_fail span').text("Error, please reload page.");
+                $('#add_weight_fail').show('slow').delay(3000).hide('slow');
+            }
+        }
+    });
+});

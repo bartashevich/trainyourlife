@@ -6,6 +6,7 @@ function print_low_navbar($active_tab){
     $exercises = '';
     $food = '';
     $profile = '';
+    $history = '';
 
     if($active_tab == 'home'){
         $home = 'active';
@@ -18,6 +19,9 @@ function print_low_navbar($active_tab){
     }
     else if($active_tab == 'profile'){
         $profile = 'active';
+    }
+    else if($active_tab == 'history'){
+        $history = 'active';
     }
 
     echo '<nav class="bar bar-tab">
@@ -37,7 +41,7 @@ function print_low_navbar($active_tab){
                     <span class="icon icon-person"></span>
                     <span class="tab-label">Profile</span>
                 </a>
-                <a class="tab-item" href="#">
+                <a class="tab-item '.$history.'" href="/index.php?p=history" data-transition="slide-in">
                     <span class="icon icon-download"></span>
                     <span class="tab-label">History</span>
                 </a>
