@@ -34,6 +34,7 @@ else if($exercise['unit'] == 'rep'){
 
     <!-- Make sure all your bars are the first things in your <body> -->
     <header class="bar bar-nav">
+        <a class="icon icon-gear pull-right" href="#settings_modal" data-transition="slide-out"></a>
         <a class="icon icon-left-nav pull-left" href="/index.php?p=<?=$_GET['previous']?>" data-transition="slide-out"></a>
         <h1 class="title"><?=$exercise['name']?></h1>
     </header>
@@ -43,6 +44,7 @@ else if($exercise['unit'] == 'rep'){
         <div class="description">
             <form id="add_exercise_to_history_form" class="content-padded">
                 <input id="exercise_name" name="exercise_name" style="display: none" value="<?=$exercise['name']?>">
+                <input id="plan_id" name="plan_id" style="display: none" value="<?=$exercise['exercise_plan_id']?>">
                 <h5 align="center">Register your progress:</h5>
                 <input value="<?=$exercise['quanty']?>" style="width: 78%" id="exercise_quanty" name="exercise_quanty" type="number" min="1" placeholder="Exercise quanty...">
                 <select id="exercise_unit" name="exercise_unit" style="width: 20%; height: 40px">

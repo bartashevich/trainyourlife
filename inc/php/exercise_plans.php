@@ -10,7 +10,7 @@ include "lib/php/exercise_plans.php";
     </header>
     <div class="content">
         <!--<h5 style="padding-left: 10px">You don't have any plan.</h5>-->
-        <ul class="table-view" style="margin-bottom: 91px">
+        <ul class="table-view" style="margin-bottom: 51px">
             <?php foreach ($exercise_plans as $plan){ ?>
                 <li class="table-view-cell media">
                     <a id="exercise-menu" data-target="#activiy-<?=$plan['id']?>" style="padding-right: 15px;text-decoration: none;">

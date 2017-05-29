@@ -27,6 +27,7 @@
 
     <!-- Make sure all your bars are the first things in your <body> -->
     <header class="bar bar-nav">
+        <a class="icon icon-gear pull-right" href="#settings_modal" data-transition="slide-out"></a>
         <a class="icon icon-left-nav pull-left" href="/index.php?p=<?=$_GET['previous']?>" data-transition="slide-out"></a>
         <h1 class="title"><?=$exercise['name']?></h1>
     </header>

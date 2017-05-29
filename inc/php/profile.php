@@ -36,7 +36,7 @@ else{
         <h4 style="display: inline; text-align: left">Current weight: <?=$current_weight?></h4><span style="float: right;"><a href="#add_weight_modal" data-transition="slide-out" class="btn btn-positive">Update</a></span>
     </div>
     <div style="padding: 15px 0"><hr></div>
-    <div class="content-padded" align="center" style="padding-bottom: 50px">
+    <div class="content-padded" align="center">
         <h4>Your weight statistics</h4>
         <div class="segmented-control">
             <a class="control-item" onclick="dailyWeight()">Daily</a>

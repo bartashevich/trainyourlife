@@ -11,7 +11,7 @@ include "lib/php/diet_plans.php";
 </header>
 <div class="content">
     <!--<h5 style="padding-left: 10px">You don't have any plan.</h5>-->
-    <ul class="table-view" style="margin-bottom: 91px">
+    <ul class="table-view" style="margin-bottom: 51px">
         <?php foreach ($diet_plans as $plan){ ?>
             <li class="table-view-cell media">
                 <a id="diet-menu" data-target="#eat<?=date('Hi', strtotime($plan['time'])) ?>" style="padding-right: 15px;text-decoration: none;">

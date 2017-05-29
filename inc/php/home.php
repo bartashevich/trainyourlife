@@ -53,7 +53,7 @@
         <li class="table-view-divider"></li>
         <li style="padding: 5px 15px" class="table-view-divider text-center">Current Exercise Plan</li>
         <li class="table-view-cell media">
-            <a class="navigate-right" href="/index.php?p=exercise_plans" data-transition="slide-in" style="padding-right: 15px;">
+            <a href="/index.php?p=exercise_plans" data-transition="slide-in" style="padding-right: 15px;">
                 <img class="media-object pull-left" src="/img/exercise_plan_personal.jpg" height="42px" width="42px">
                 <div class="media-body">
                     Workout Plan

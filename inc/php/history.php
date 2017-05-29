@@ -31,7 +31,7 @@ else{
     </header>
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content">
+    <div class="content" style="padding-bottom: 50px">
         <div class="description" style="padding: 15px">
             <select id="exercise_history" name="exercise_history" style="width: 100%; height: 40px">
                 <option value="0">Choose exercise...</option>

@@ -302,7 +302,7 @@ $(document).on("click","#add_exercise_to_history",function() {
     });
 });
 
-//ADD EXERCISE TO HISTORY
+//ADD WEIGHT TO HISTORY
 $(document).on("click","#add_weight",function() {
     $.ajax({
         url: 'lib/php/classes/add_weight.php',
