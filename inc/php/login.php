@@ -68,15 +68,19 @@
     <div class="content-padded" align="center">
         <img style="max-width: 100%" src="/uploads/images/images.jpg">
     </div>
-    <form class="content-padded">
-        <input type="text" placeholder="Email / Username">
-        <input type="password" placeholder="Password">
-        <a href="/index.php?p=home" class="btn btn-positive btn-block">Login</a>
+    <form id="login" class="content-padded">
+        <input onkeydown = "if (event.keyCode == 13) login();" id="email_username" name="email_username" type="text" placeholder="Email / Username">
+        <input onkeydown = "if (event.keyCode == 13) login();" id="password" name="password" type="password" placeholder="Password">
+        <a onclick="login()" class="btn btn-positive btn-block">Login</a>
         <!--<a href="/index.php?p=home" data-transition="slide-in" class="btn btn-primary btn-block">Continue without login...</a>-->
     </form>
-    <div align="center" style="padding-top: 30px">
+    <div id="login_fail" align="center" style="display: none">
+        <span style="color: red">Login error</span>
+    </div>
+    <div align="center" style="padding-top: 20px">
         <p><a href="/index.php?p=password_recovery" data-transition="slide-in">Forgot your password?</a><br>
-            <a href="/index.php?p=register" data-transition="slide-in">Don't have an account yet?</a></p>
+            <a href="/index.php?p=register" data-transition="slide-in">Don't have an account yet?</a>
+        </p>
     </div>
 </div>
 

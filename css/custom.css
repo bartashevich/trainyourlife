@@ -25,6 +25,27 @@ table.food th{
     text-align: center;
 }
 
+table.add_food_table td{
+    padding: 0 5px;
+}
+
 .disable-a{
     pointer-events: none;
+}
+
+/** ADD DIET SELECT ICON */
+label > input{ /* HIDE RADIO */
+    visibility: hidden; /* Makes input not-clickable */
+    position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+    cursor:pointer;
+    border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+    border:2px solid #f00;
+}
+
+.content{
+    padding-bottom: 50px;
 }

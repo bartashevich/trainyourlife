@@ -4,6 +4,7 @@
 <script src="https://code.highcharts.com/highcharts-more.js"></script>
 <script src="/js/ratchet.js"></script>
 <script src="/js/custom.js"></script>
+<script src="/js/functions.js"></script>
 
 
 </body>

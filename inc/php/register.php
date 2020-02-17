@@ -10,14 +10,20 @@
 
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div class="content">
-    <form class="content-padded">
-        <input type="text" placeholder="Full name">
-        <input type="text" placeholder="Username">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <input type="password" placeholder="Password (again)">
-        <button class="btn btn-positive btn-block">Register</button>
+    <form id="register" class="content-padded">
+        <input id="full_name" name="full_name" type="text" placeholder="Full name">
+        <input id="username" name="username" type="text" placeholder="Username">
+        <input id="email" name="email" type="email" placeholder="Email">
+        <input id="password" name="password" type="password" placeholder="Password">
+        <input id="password_again" name="password_again" type="password" placeholder="Password (again)">
+        <a onclick="register()" class="btn btn-positive btn-block">Register</a>
     </form>
+    <div id="register_success" align="center" style="display: none">
+        <span style="color: green">You were registered successfully!</span>
+    </div>
+    <div id="register_fail" align="center" style="display: none">
+        <span style="color: red">A problem has occured!</span>
+    </div>
 </div>
 
 <?php
