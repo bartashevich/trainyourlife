@@ -8,4 +8,7 @@ This application was developed using HTML, CSS and Javascript, with the aid of P
 ## Video demo
 YouTube: https://www.youtube.com/watch?v=yZ15IxK6_0k
 
+## Documentation (in Portuguese)
+In the /docs folder
+
 ![Picture](https://user-images.githubusercontent.com/9809095/74647535-bea82180-5173-11ea-9d5e-03b2f5ba2be9.png)
